@@ -1,0 +1,25 @@
+server:
+  port: 9900
+
+logging:
+  level:
+    root: INFO
+
+application.package: com.example.demo
+
+spring:
+  application:
+    name: demo-dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/DEMODB
+    username: root
+    password: Psaiesh@21
+    
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
