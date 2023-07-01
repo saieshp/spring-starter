@@ -10,8 +10,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "STUDENT_INFO")
-public class Student {
+@Table(name = "TEACHER_INFO")
+public class Teacher {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,15 +23,10 @@ public class Student {
 	@Size(min = 3, max = 30)
 	private String name;
 	
-	@Column(name = "GENDER", nullable = false, length = 1)
+	@Column(name = "DEPARTMENT", nullable = false, length = 30)
 	@NotNull
-	@Size(min = 1, max = 1)
-	private String gender;
-	
-	@Column(name = "ROLL_NUMBER", nullable = false, length = 10)
-	@NotNull
-	@Size(min = 5, max = 10)
-	private String rollNumber;
+	@Size(min = 3, max = 30)
+	private String department;
 	
 	@Column(name = "CLASS_Info", nullable = false, length = 10)
 	@NotNull
@@ -54,20 +49,12 @@ public class Student {
 		this.name = name;
 	}
 
-	public String getGender() {
-		return gender;
+	public String getDepartment() {
+		return department;
 	}
 
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-
-	public String getRollNumber() {
-		return rollNumber;
-	}
-
-	public void setRollNumber(String rollNumber) {
-		this.rollNumber = rollNumber;
+	public void setDepartment(String department) {
+		this.department = department;
 	}
 
 	public String getClassInfo() {
@@ -76,5 +63,5 @@ public class Student {
 
 	public void setClassInfo(String classInfo) {
 		this.classInfo = classInfo;
-	}		
+	}
 }

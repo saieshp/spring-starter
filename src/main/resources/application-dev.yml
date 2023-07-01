@@ -1,11 +1,13 @@
 server:
   port: 9900
-
+spring.datasource.driver-class-name: com.mysql.cj.jdbc.Driver
 logging:
   level:
     root: INFO
 
 application.package: com.example.demo
+website.name: https://google.com
+
 
 spring:
   application:
@@ -23,3 +25,5 @@ spring:
     properties:
       dialect: org.hibernate.dialect.MySQL8Dialect
     show-sql: true
+    
+    
